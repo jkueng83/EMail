@@ -37,7 +37,6 @@ namespace Mail
 
         private void LoadDefaultEmail()
         {
-
             tBoxSubject.Text = "Default E-Mail";
 
             tBoxBody.Text = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt" +
@@ -99,29 +98,7 @@ namespace Mail
         }
 
         private string GetFooter()
-        {
-            // Wird im Mail nicht schön dargestellt:
-            //
-            //string s = "\n";
-            //string s2 = "***** created form JK with C# *****";
-
-            //for (int i = 0; i < 3; i++)
-            //{
-            //    s += "\n";
-            //    if (i % 2 == 0)
-            //    {
-            //        for (int j = 0; j < s2.Length; j++)
-            //        {
-            //            s += "=";
-            //        }
-            //    }
-            //    else
-            //    {
-            //        s += s2;
-            //    }
-            //}
-            //return s;
-
+        {          
             string s = "\n\n***** created form JK with C# *****";
             return s;
         }
@@ -170,24 +147,14 @@ namespace Mail
 
         private void LoadAttachment(string path , string name)
         {
-
             string file = @""+ path;
-            // Create  the file attachment for this email message.
+          
             Attachment data = new Attachment(file, MediaTypeNames.Application.Octet);
-            // Add time stamp information for the file.
-            //ContentDisposition disposition = data.ContentDisposition;
-            //disposition.CreationDate = System.IO.File.GetCreationTime(file);
-            //disposition.ModificationDate = System.IO.File.GetLastWriteTime(file);
-            //disposition.ReadDate = System.IO.File.GetLastAccessTime(file);
-            // Add the file attachment to this email message.
-           
-
-
+          
             _attachments.Add(data);
 
             ViewAttachments();
         }
-
 
 
         private void btTakeFrom_Click(object sender, EventArgs e)
@@ -198,26 +165,25 @@ namespace Mail
         private void btAddFile_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
+
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string path = openFileDialog.FileName;
                 string fileName = openFileDialog.SafeFileName;
-                LoadAttachment(path, fileName);
-
-               
+                LoadAttachment(path, fileName);              
             } 
         }
 
         private void ViewAttachments()
         {
-
             string[] fileNames = _attachments.Select(x => x.Name).ToArray();
             string attachmentString = "";
+
             foreach (var fileName in fileNames)
             {
                 attachmentString += fileName + "; ";
-
             }
+
             tBoxAttachment.Text = attachmentString;
         }
     }
