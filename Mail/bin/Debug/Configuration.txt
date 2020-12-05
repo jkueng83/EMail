@@ -1,0 +1,4 @@
+from;name@abc.com
+password;lalalala
+server;mail.gmx.net
+port;587

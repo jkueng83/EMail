@@ -1,0 +1,10 @@
+C:\03_Coding\02 Projects\C#\Mail\Mail\bin\Debug\Mail.exe.config
+C:\03_Coding\02 Projects\C#\Mail\Mail\bin\Debug\Mail.exe
+C:\03_Coding\02 Projects\C#\Mail\Mail\bin\Debug\Mail.pdb
+C:\03_Coding\02 Projects\C#\Mail\Mail\obj\Debug\Mail.csprojAssemblyReference.cache
+C:\03_Coding\02 Projects\C#\Mail\Mail\obj\Debug\Mail.Form1.resources
+C:\03_Coding\02 Projects\C#\Mail\Mail\obj\Debug\Mail.Properties.Resources.resources
+C:\03_Coding\02 Projects\C#\Mail\Mail\obj\Debug\Mail.csproj.GenerateResource.cache
+C:\03_Coding\02 Projects\C#\Mail\Mail\obj\Debug\Mail.csproj.CoreCompileInputs.cache
+C:\03_Coding\02 Projects\C#\Mail\Mail\obj\Debug\Mail.exe
+C:\03_Coding\02 Projects\C#\Mail\Mail\obj\Debug\Mail.pdb
