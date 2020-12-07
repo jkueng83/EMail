@@ -99,7 +99,7 @@ namespace Mail
 
         private string GetFooter()
         {          
-            string s = "\n\n***** created form JK with C# *****";
+            string s = "\n\n***** created by JK with C# *****";
             return s;
         }
 
